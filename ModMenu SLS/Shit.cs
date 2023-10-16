@@ -18,7 +18,9 @@ namespace ModMenu_SLS
                 yield return new WaitForSeconds(1f);
             }
         }
-
+        float wallettoadd = 0;
+        float banktoadd = 0;
+        float cardtoadd = 0;
         public override void OnGUI()
         {
             GUI.backgroundColor = Color.white;
@@ -26,6 +28,33 @@ namespace ModMenu_SLS
             if (GUILayout.Button("Disable Needs:" + bNoNeeds))
             {
                 bNoNeeds = !bNoNeeds;
+            }
+
+            GUILayout.Space(10f);
+
+            GUILayout.Label("Money Amount to add to card");
+            cardtoadd = float.Parse(GUILayout.TextField(cardtoadd.ToString()));
+            if (GUILayout.Button("Add Money to Card"))
+            {
+                PlayerPrefs.SetFloat("cardmoney", PlayerPrefs.GetFloat("cardmoney") + cardtoadd);
+            }
+
+            GUILayout.Space(10f);
+
+            GUILayout.Label("Money Amount to add to wallet");
+            wallettoadd = float.Parse(GUILayout.TextField(wallettoadd.ToString()));
+            if (GUILayout.Button("Add Money to wallet"))
+            {
+                PlayerPrefs.SetFloat("money", PlayerPrefs.GetFloat("money") + wallettoadd);
+            }
+
+            GUILayout.Space(10f);
+
+            GUILayout.Label("Money Amount to add to bank");
+            banktoadd = float.Parse(GUILayout.TextField(banktoadd.ToString()));
+            if (GUILayout.Button("Add Money to bank"))
+            {
+                PlayerPrefs.SetFloat("bankmoney", PlayerPrefs.GetFloat("bankmoney") + banktoadd);
             }
             /*if(GUILayout.Button("Set Night"))
             {
@@ -35,7 +64,7 @@ namespace ModMenu_SLS
             {
                 Time.time = 12f;
             }*/
-            
+
         }
 
         public override void OnApplicationStart()
