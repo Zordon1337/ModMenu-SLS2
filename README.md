@@ -1,6 +1,6 @@
 # ModMenu-SLS
 Mod Menu for Streamer Life Simulator
-
+ 
 # it's my first mod that i'm not using injecting dll directly into game but using Melon Loader
 
 ## the melon loader is kinda bugged in SLS so you need to install with my tutorial
