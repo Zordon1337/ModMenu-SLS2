@@ -9,6 +9,7 @@ namespace ModMenu_SLS
     class Shit:MelonMod
     {
         bool bNoNeeds = false;
+        bool bNoClip = false;
         
         float wallettoadd = 0;
         float banktoadd = 0;
@@ -29,6 +30,7 @@ namespace ModMenu_SLS
         float VanFuel = 0;
         float SuvFuel = 0;
         float JapaneseCarFuel = 0;
+        float speed = 25f;
 
         void RenderUI(int id)
         {
@@ -70,6 +72,12 @@ namespace ModMenu_SLS
                         {"Dealer Guy", new Vector3(1346.5f, 28.5f, 1803.4f)},
                         {"Mosi House", new Vector3(1328.7f, 22.8f, 849.0f)},
                         {"Dady Car(this is how dev called it)(starter car)", CM.dadyCar.transform.position },
+                        {"Japanese Car", CM.japaneseCar.transform.position },
+                        { "Van", CM.vanCar.transform.position},
+                        { "Suv", CM.suvCar.transform.position},
+                        {" Porsche", CM.porscheCar.transform.position },
+                        { "Gas Station 1", new Vector3(722.7f, 22.2f, 522.7f) },
+                        { "Gas Station 2", new Vector3(434.8f, 19.0f, 1158.9f)}
                 };
 
                 foreach (var Plrdestination in PlayerToteleportDestinations)
@@ -81,7 +89,11 @@ namespace ModMenu_SLS
                 }
                 Dictionary<string, Transform> ItemToteleportDestinations = new Dictionary<string, Transform>
                 {
-                        {"Dady Car", CM.dadyCar.transform}
+                        {"Dady Car", CM.dadyCar.transform},
+                        {"Japanese Car", CM.japaneseCar.transform },
+                        { "Van", CM.vanCar.transform},
+                        { "Suv", CM.suvCar.transform},
+                        {" Porsche", CM.porscheCar.transform }
                 };
 
                 foreach (var Plrdestination in ItemToteleportDestinations)
@@ -167,6 +179,12 @@ namespace ModMenu_SLS
                     }
                     System.IO.File.AppendAllText("D:\\ModMenu_SLS\\dump.txt", $"\n{posname} = {PlayerController.playerRay.transform.position.ToString()}");
                 }
+                GUILayout.Label("NoClip Speed");
+                speed = GUILayout.HorizontalSlider(speed, 1f, 25f);
+                if(GUILayout.Button($"NoClip: {bNoClip}"))
+                {
+                    bNoClip = !bNoClip;
+                }
             }
             GUI.EndGroup();
         }
@@ -175,12 +193,12 @@ namespace ModMenu_SLS
             // it won't crash lol
             if(PlayerController != null)
             {
-                GUILayout.Label(PlayerController.playerRay.transform.position.ToString());
+                /*GUILayout.Label(PlayerController.playerRay.transform.position.ToString());
                 GUILayout.Label(CM.dadyCarRear.transform.name + "carfuel");
                 GUILayout.Label(CM.japaneseCarRear.transform.name + "carfuel");
                 GUILayout.Label(CM.porscheCarRear.transform.name + "carfuel");
                 GUILayout.Label(CM.suvCarRear.transform.name + "carfuel");
-                GUILayout.Label(CM.vanCar.transform.name + "carfuel");
+                GUILayout.Label(CM.vanCar.transform.name + "carfuel");*/
             }
             if (isMenuOpen && SDK.IsInGame)
             {
@@ -250,6 +268,38 @@ namespace ModMenu_SLS
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
                     
+                }
+            }
+            
+            if (PlayerController != null)
+            {
+                if(bNoClip)
+                {
+                    if (Input.GetKey(KeyCode.Space))
+                    {
+                        SDK.TeleportPlayer(PlayerController, new Vector3(PlayerController.playerRay.transform.position.x, PlayerController.playerRay.transform.position.y + speed, PlayerController.playerRay.transform.position.z));
+                    }
+
+                    Vector3 playerTransformPosVec = PlayerController.playerRay.transform.position;
+                    if (Input.GetKey(KeyCode.W))
+                    {
+                        SDK.TeleportPlayer(PlayerController, new Vector3(playerTransformPosVec.x + PlayerController.playerRay.playerMainCamera.transform.forward.x * PlayerController.playerRay.playerMainCamera.transform.up.y * speed, playerTransformPosVec.y + PlayerController.playerRay.playerMainCamera.transform.forward.y * speed, playerTransformPosVec.z + PlayerController.playerRay.playerMainCamera.transform.forward.z * PlayerController.playerRay.playerMainCamera.transform.up.y * speed));
+                    }
+
+                    if (Input.GetKey(KeyCode.S))
+                    {
+                        SDK.TeleportPlayer(PlayerController, new Vector3(playerTransformPosVec.x - PlayerController.playerRay.playerMainCamera.transform.forward.x * PlayerController.playerRay.playerMainCamera.transform.up.y * speed, playerTransformPosVec.y - PlayerController.playerRay.playerMainCamera.transform.forward.y * speed, playerTransformPosVec.z - PlayerController.playerRay.playerMainCamera.transform.forward.z * PlayerController.playerRay.playerMainCamera.transform.up.y * speed));
+                    }
+
+                    if (Input.GetKey(KeyCode.D))
+                    {
+                        SDK.TeleportPlayer(PlayerController, new Vector3(playerTransformPosVec.x + PlayerController.playerRay.playerMainCamera.transform.right.x * speed, playerTransformPosVec.y, playerTransformPosVec.z + PlayerController.playerRay.playerMainCamera.transform.right.z * speed));
+                    }
+
+                    if (Input.GetKey(KeyCode.A))
+                    {
+                        SDK.TeleportPlayer(PlayerController, new Vector3(playerTransformPosVec.x - PlayerController.playerRay.playerMainCamera.transform.right.x * speed, playerTransformPosVec.y, playerTransformPosVec.z - PlayerController.playerRay.playerMainCamera.transform.right.z * speed));
+                    }
                 }
             }
             calls++;
