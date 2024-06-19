@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModMenu_SLS.Modules.CountarStrika
 {
-    internal class NoRecoil
+    internal class NoSpread
     {
         public static void Run()
         {

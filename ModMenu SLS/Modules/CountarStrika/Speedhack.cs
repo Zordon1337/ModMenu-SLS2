@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModMenu_SLS.Modules.CountarStrika
 {
-    internal class InfHealth
+    internal class Speedhack
     {
         public static void Run()
         {
@@ -20,8 +20,8 @@ namespace ModMenu_SLS.Modules.CountarStrika
                 if (CPlayer.kalash == null)
                     return;
                 var weapons = SDK.weapons;
-                
-                CPlayer.health = 420;
+
+                CPlayer.speed = 5;
             }
         }
     }
