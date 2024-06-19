@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace ModMenu_SLS.Modules.CountarStrika
 {
@@ -22,6 +23,13 @@ namespace ModMenu_SLS.Modules.CountarStrika
                 var weapons = SDK.weapons;
                 
                 CPlayer.health = 420;
+                /*foreach(var bot in GameObject.FindObjectsOfType<CounterAi>())
+                {
+                    if(bot.health == 420)
+                    {
+                        bot.health = 0;
+                    }
+                }*/
             }
         }
     }

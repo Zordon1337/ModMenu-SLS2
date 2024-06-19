@@ -53,7 +53,8 @@ namespace ModMenu_SLS
                     Modules.CountarStrika.InfAmmo.Run();
                     Modules.CountarStrika.InfDamage.Run();
                     Modules.CountarStrika.NoSpread.Run();
-                    Modules.CountarStrika.InfHealth.Run(); 
+                    Modules.CountarStrika.InfHealth.Run();
+                    Modules.CountarStrika.Speedhack.Run();
                 }
                 
             }

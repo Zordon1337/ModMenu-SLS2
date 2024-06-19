@@ -17,11 +17,8 @@ namespace ModMenu_SLS.Modules.CountarStrika
                     return;
 
                 var CPlayer = SDK.CountarStrika.csPlayer;
-                if (CPlayer.kalash == null)
-                    return;
-                var weapons = SDK.weapons;
 
-                CPlayer.speed = 5;
+                CPlayer.speed = 50;
             }
         }
     }
