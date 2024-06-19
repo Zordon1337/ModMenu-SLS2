@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace ModMenu_SLS.UI
 {
     internal class Watermark
     {
+
         public static void Render()
         {
             GUIStyle style = new GUIStyle();
@@ -20,11 +22,11 @@ namespace ModMenu_SLS.UI
             style.normal.background = SDK.MakeTexture(2, 2, Color.red);
             style.onHover.background = SDK.MakeTexture(2, 2, Color.red);
             style.hover.background = SDK.MakeTexture(2, 2, Color.red);
-            GUILayout.Window(420, new Rect(15, 15, 250, 25), Window, "");
+            GUILayout.Window(420, new Rect(15, 15, 260, 25), Window, "");
         }
         public static void Window(int wid)
         {
-            GUILayout.Label("ModMenu SLS");
+            GUILayout.Label($"ModMenu SLS - {Properties.Resources.BuildDate}");
         }
     }
 }

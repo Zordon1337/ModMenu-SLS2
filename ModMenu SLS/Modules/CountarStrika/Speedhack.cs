@@ -22,4 +22,4 @@ namespace ModMenu_SLS.Modules.CountarStrika
             }
         }
     }
-}
+} 
