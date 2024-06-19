@@ -37,6 +37,23 @@ namespace ModMenu_SLS
             TP.position = Where;
         }
         public static bool IsInGame => CarManager.Instance != null;
-        
+        public static bool bNoNeeds = false;
+        public static bool bNoClip = false;
+        public static GUIStyle ButtonStyle = new GUIStyle();
+        public static GUIStyle ButtonStyleNavBar = new GUIStyle();
+        public static GUIStyle WindowStyle = new GUIStyle();
+        public static GUIStyle TextBoxStyle = new GUIStyle();
+        public static string posname = "";
+        public static TimeManager Time;
+        public static PlayerController PlayerController;
+
+        public static Weapon[] weapons = new Weapon[] { new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon()};
+        public static CountarStrika CountarStrika;
+        public static CarManager CM;
+        public static float wallettoadd = 0;
+        public static float banktoadd = 0;
+        public static float cardtoadd = 0;
+        public static float speed = 25f;
+        public static int page = 0;
     }
 }
