@@ -25,17 +25,8 @@ namespace ModMenu_SLS.Modules.CountarStrika
                 whinst.tEnemy3.enabled = true;
                 whinst.tEnemy4.enabled = true;
                 whinst.tEnemy5.enabled = true;
-                whinst.ctEnemy1.OutlineWidth = 2f;
-                whinst.ctEnemy2.OutlineWidth = 2f;
-                whinst.ctEnemy3.OutlineWidth = 2f;
-                whinst.ctEnemy4.OutlineWidth = 2f;
-                whinst.ctEnemy5.OutlineWidth = 2f;
-                whinst.tEnemy1.OutlineWidth = 2f;
-                whinst.tEnemy2.OutlineWidth = 2f;
-                whinst.tEnemy3.OutlineWidth = 2f;
-                whinst.tEnemy4.OutlineWidth = 2f;
-                whinst.tEnemy5.OutlineWidth = 2f;
             }
         }
     }
 }
+ 
