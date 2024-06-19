@@ -27,27 +27,27 @@ namespace ModMenu_SLS.UI
                 SDK.bNoClip = !SDK.bNoClip;
             }
             GUILayout.Label("CountarStrika Cheat");
-            if (GUILayout.Button("Infinity Ammo", SDK.ButtonStyle))
+            if (GUILayout.Button($"Infinity Ammo: {SDK.InfAmmo}", SDK.ButtonStyle))
             {
                 SDK.InfAmmo = !SDK.InfAmmo;
             }
-            if (GUILayout.Button("Infinity Damage", SDK.ButtonStyle))
+            if (GUILayout.Button($"Infinity Damage: {SDK.InfDamage}", SDK.ButtonStyle))
             {
                 SDK.InfDamage = !SDK.InfDamage;
             }
-            if (GUILayout.Button("Infinity Health", SDK.ButtonStyle))
+            if (GUILayout.Button($"Infinity Health: {SDK.InfHealth}", SDK.ButtonStyle))
             {
                 SDK.InfHealth = !SDK.InfHealth;
             }
-            if (GUILayout.Button("NoSpread", SDK.ButtonStyle))
+            if (GUILayout.Button($"NoSpread: {SDK.NoSpread}", SDK.ButtonStyle))
             {
                 SDK.NoSpread = !SDK.NoSpread;
             }
-            if (GUILayout.Button("RapidFire", SDK.ButtonStyle))
+            if (GUILayout.Button($"RapidFire: {SDK.RapidFire}", SDK.ButtonStyle))
             {
                 SDK.RapidFire = !SDK.RapidFire;
             }
-            if (GUILayout.Button("Speedhack", SDK.ButtonStyle))
+            if (GUILayout.Button($"Speedhack: {SDK.Speedhack}", SDK.ButtonStyle))
             {
                 SDK.Speedhack = !SDK.Speedhack;
             }
