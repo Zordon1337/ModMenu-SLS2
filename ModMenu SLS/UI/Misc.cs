@@ -22,35 +22,16 @@ namespace ModMenu_SLS.UI
             }
             GUILayout.Label("NoClip Speed");
             SDK.speed = GUILayout.HorizontalSlider(SDK.speed, 1f, 25f);
-            if (GUILayout.Button($"NoClip: {SDK.bNoClip}"))
-            {
-                SDK.bNoClip = !SDK.bNoClip;
-            }
+            SDK.bNoClip = GUILayout.Toggle(SDK.bNoClip, $"NoClip: {SDK.bNoClip}", SDK.CheckboxStyle);
             GUILayout.Label("CountarStrika Cheat");
-            if (GUILayout.Button($"Infinity Ammo: {SDK.InfAmmo}", SDK.ButtonStyle))
-            {
-                SDK.InfAmmo = !SDK.InfAmmo;
-            }
-            if (GUILayout.Button($"Infinity Damage: {SDK.InfDamage}", SDK.ButtonStyle))
-            {
-                SDK.InfDamage = !SDK.InfDamage;
-            }
-            if (GUILayout.Button($"Infinity Health: {SDK.InfHealth}", SDK.ButtonStyle))
-            {
-                SDK.InfHealth = !SDK.InfHealth;
-            }
-            if (GUILayout.Button($"NoSpread: {SDK.NoSpread}", SDK.ButtonStyle))
-            {
-                SDK.NoSpread = !SDK.NoSpread;
-            }
-            if (GUILayout.Button($"RapidFire: {SDK.RapidFire}", SDK.ButtonStyle))
-            {
-                SDK.RapidFire = !SDK.RapidFire;
-            }
-            if (GUILayout.Button($"Speedhack: {SDK.Speedhack}", SDK.ButtonStyle))
-            {
-                SDK.Speedhack = !SDK.Speedhack;
-            }
+            SDK.InfAmmo = GUILayout.Toggle(SDK.InfAmmo, $"Infinity Ammo: {SDK.InfAmmo}", SDK.CheckboxStyle);
+            SDK.InfDamage = GUILayout.Toggle(SDK.InfDamage, $"Infinity Damage: {SDK.InfDamage}", SDK.CheckboxStyle);
+            SDK.InfHealth = GUILayout.Toggle(SDK.InfHealth, $"Infinity Health: {SDK.InfHealth}", SDK.CheckboxStyle);
+            SDK.NoSpread = GUILayout.Toggle(SDK.NoSpread, $"NoSpread: {SDK.NoSpread}", SDK.CheckboxStyle);
+            SDK.RapidFire = GUILayout.Toggle(SDK.RapidFire, $"RapidFire: {SDK.RapidFire}", SDK.CheckboxStyle);
+            SDK.Speedhack = GUILayout.Toggle(SDK.Speedhack, $"Speedhack: {SDK.Speedhack}", SDK.CheckboxStyle);
+            SDK.Wallhack = GUILayout.Toggle(SDK.Wallhack, $"Wallhack(requires to have bought and running Wall-Hack app from DeebWeb): {SDK.Wallhack}", SDK.CheckboxStyle);
+            SDK.InfinityJump = GUILayout.Toggle(SDK.InfinityJump, $"Infinity Jump: {SDK.InfinityJump}", SDK.CheckboxStyle);
         }
     }
 }

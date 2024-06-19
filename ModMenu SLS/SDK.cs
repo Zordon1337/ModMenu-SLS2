@@ -43,6 +43,7 @@ namespace ModMenu_SLS
         public static GUIStyle ButtonStyleNavBar = new GUIStyle();
         public static GUIStyle WindowStyle = new GUIStyle();
         public static GUIStyle TextBoxStyle = new GUIStyle();
+        public static GUIStyle CheckboxStyle = new GUIStyle();
         public static string posname = "";
         public static TimeManager Time;
         public static PlayerController PlayerController;

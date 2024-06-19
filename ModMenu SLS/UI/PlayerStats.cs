@@ -14,10 +14,7 @@ namespace ModMenu_SLS.UI
             //cardtoadd = PlayerPrefs.GetFloat("cardmoney");
             //wallettoadd = PlayerPrefs.GetFloat("money");
             //banktoadd = PlayerPrefs.GetFloat("bankmoney");
-            if (GUILayout.Button("Disable Needs:" + SDK.bNoNeeds, SDK.ButtonStyle))
-            {
-                SDK.bNoNeeds = !SDK.bNoNeeds;
-            }
+            SDK.bNoNeeds = GUILayout.Toggle(SDK.bNoNeeds, $"Disable Needs: {SDK.bNoNeeds}", SDK.CheckboxStyle);
             GUILayout.Space(10f);
             SDK.cardtoadd = float.Parse(GUILayout.TextField(SDK.cardtoadd.ToString(), SDK.TextBoxStyle));
             if (GUILayout.Button("Add Money to Card", SDK.ButtonStyle))

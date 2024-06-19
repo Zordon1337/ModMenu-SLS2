@@ -60,9 +60,16 @@ namespace ModMenu_SLS.UI
                 SDK.TextBoxStyle.active.textColor = Color.black;
                 SDK.TextBoxStyle.normal.textColor = Color.black;
                 SDK.TextBoxStyle.hover.textColor = Color.black;
-
+                SDK.CheckboxStyle = new GUIStyle(SDK.ButtonStyle); // Create a new GUIStyle and copy properties
+                SDK.CheckboxStyle.normal.background = SDK.MakeTexture(2, 2, ButtonColor);
+                SDK.CheckboxStyle.normal.textColor = Color.white;
+                SDK.CheckboxStyle.active.background = SDK.MakeTexture(2, 2, ButtonColor);
+                SDK.CheckboxStyle.active.textColor = Color.white;
+                SDK.CheckboxStyle.hover.background = SDK.MakeTexture(2, 2, HoverButtonColor);
+                SDK.CheckboxStyle.hover.textColor = Color.black;
+                SDK.CheckboxStyle.alignment = TextAnchor.MiddleLeft; // Align text to the left for checkbox
                 // Draw the window if the menu is open
-                var window = GUI.Window(0, new Rect(Screen.width / 2 - 262, Screen.height / 2 - 250, 525, 500), Window.Render, "SLS mod menu", SDK.WindowStyle);
+                var window = GUI.Window(0, new Rect(Screen.width / 2 - 262, Screen.height / 2 - 300, 525, 600), Window.Render, "SLS mod menu", SDK.WindowStyle);
             }
         }
     }
