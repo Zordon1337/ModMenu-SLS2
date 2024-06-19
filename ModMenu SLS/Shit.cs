@@ -56,6 +56,7 @@ namespace ModMenu_SLS
                     Modules.CountarStrika.NoSpread.Run();
                     Modules.CountarStrika.InfHealth.Run();
                     Modules.CountarStrika.Speedhack.Run();
+                    Modules.CountarStrika.InfinityJump.Run();
                 }
                 
             }

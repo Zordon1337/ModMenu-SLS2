@@ -78,6 +78,10 @@
     <Reference Include="UnityEngine.Physics2DModule">
       <HintPath>D:\SteamLibrary\steamapps\common\Streamer Life Simulator\windows_content\Streamer Life Simulator_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Streamer Life Simulator\windows_content\Streamer Life Simulator_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>D:\SteamLibrary\steamapps\common\Streamer Life Simulator\windows_content\Streamer Life Simulator_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
@@ -89,6 +93,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modules\CountarStrika\InfinityJump.cs" />
     <Compile Include="Modules\CountarStrika\InfDamage.cs" />
     <Compile Include="Modules\CountarStrika\InfAmmo.cs" />
     <Compile Include="Modules\CountarStrika\InfHealth.cs" />
