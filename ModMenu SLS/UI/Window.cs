@@ -24,7 +24,7 @@ namespace ModMenu_SLS.UI
             {
                 SDK.page = 2;
             }
-            GUI.BeginGroup(new Rect(0, 65, 525, 500 - 65)); // yes i can't do math
+            GUI.BeginGroup(new Rect(0, 65, 525, 600 - 65)); // yes i can't do math
             GUILayout.Space(10f);
             if (SDK.page == 0)
             {
