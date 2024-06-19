@@ -64,5 +64,6 @@ namespace ModMenu_SLS
         public static bool Speedhack = false;
         public static bool InfinityJump = false;
         public static bool Wallhack = false;
+        public static bool CounterHouse = false;
     }
 }

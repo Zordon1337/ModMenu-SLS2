@@ -58,6 +58,7 @@ namespace ModMenu_SLS
                     Modules.CountarStrika.Speedhack.Run();
                     Modules.CountarStrika.InfinityJump.Run();
                     Modules.CountarStrika.Wallhack.Run();
+                    Modules.CountarStrika.SpawnerExploits.Run();
                 }
                 
             }
