@@ -55,5 +55,11 @@ namespace ModMenu_SLS
         public static float cardtoadd = 0;
         public static float speed = 25f;
         public static int page = 0;
+        public static bool InfAmmo = false;
+        public static bool InfDamage = false;
+        public static bool InfHealth = false;
+        public static bool NoSpread = false;
+        public static bool RapidFire = false;
+        public static bool Speedhack = false;
     }
 }

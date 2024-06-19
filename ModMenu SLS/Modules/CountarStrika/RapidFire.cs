@@ -12,7 +12,7 @@ namespace ModMenu_SLS.Modules
         public static void Run()
         {
             
-            if(SDK.CountarStrika != null)
+            if(SDK.CountarStrika != null && SDK.RapidFire)
             {
                 if (SDK.CountarStrika.csPlayer == null)
                     return;

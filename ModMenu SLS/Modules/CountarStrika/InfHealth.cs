@@ -12,7 +12,7 @@ namespace ModMenu_SLS.Modules.CountarStrika
         public static void Run()
         {
 
-            if (SDK.CountarStrika != null)
+            if (SDK.CountarStrika != null && SDK.InfHealth)
             {
                 if (SDK.CountarStrika.csPlayer == null)
                     return;

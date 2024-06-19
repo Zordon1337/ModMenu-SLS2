@@ -18,6 +18,7 @@ namespace ModMenu_SLS
         {
             ThemeLoader.Load();
             Watermark.Render();
+            
         }
         int calls = 0;
         public override void OnUpdate()
