@@ -23,7 +23,7 @@ namespace ModMenu_SLS.Modules
                 var weapons = SDK.weapons;
                 foreach (var wp in weapons)
                 {
-                    wp.fireRate = 4200f;
+                    wp.fireRate = 0;
                 }
             }
         }
