@@ -51,6 +51,7 @@ namespace ModMenu_SLS
         public static Weapon[] weapons = new Weapon[] { new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon()};
         public static CountarStrika CountarStrika;
         public static CarManager CM;
+        public static CounterAi[] ai;
         public static float wallettoadd = 0;
         public static float banktoadd = 0;
         public static float cardtoadd = 0;

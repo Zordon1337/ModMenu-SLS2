@@ -5,6 +5,7 @@ using System.Reflection.Emit;
 using System.Collections.Generic;
 using ModMenu_SLS;
 using ModMenu_SLS.UI;
+using static RootMotion.FinalIK.AimPoser;
 namespace ModMenu_SLS
 {
     class Shit:MelonMod
@@ -18,7 +19,7 @@ namespace ModMenu_SLS
         {
             ThemeLoader.Load();
             Watermark.Render();
-            
+           
         }
         int calls = 0;
         public override void OnUpdate()
@@ -50,6 +51,7 @@ namespace ModMenu_SLS
                     SDK.weapons[3] = SDK.CountarStrika.csPlayer.m16;
                     SDK.weapons[4] = SDK.CountarStrika.csPlayer.pistol;
                     SDK.weapons[5] = SDK.CountarStrika.csPlayer.deagle;
+                    SDK.ai = GameObject.FindObjectsOfType<CounterAi>();
                     Modules.RapidFire.Run();
                     Modules.CountarStrika.InfAmmo.Run();
                     Modules.CountarStrika.InfDamage.Run();
