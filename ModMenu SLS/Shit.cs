@@ -51,7 +51,8 @@ namespace ModMenu_SLS
                     SDK.weapons[3] = SDK.CountarStrika.csPlayer.m16;
                     SDK.weapons[4] = SDK.CountarStrika.csPlayer.pistol;
                     SDK.weapons[5] = SDK.CountarStrika.csPlayer.deagle;
-                    SDK.ai = GameObject.FindObjectsOfType<CounterAi>();
+                    if(GameObject.FindObjectsOfType<CounterAi>() != null)
+                        SDK.ai = GameObject.FindObjectsOfType<CounterAi>();
                     Modules.RapidFire.Run();
                     Modules.CountarStrika.InfAmmo.Run();
                     Modules.CountarStrika.InfDamage.Run();
