@@ -41,6 +41,7 @@ namespace ModMenu_SLS.UI
             {
                 SDK.Time.time = 12f;
             }
+            SDK.DisableToxicity = GUILayout.Toggle(SDK.DisableToxicity, "Disable stream toxicity: " + SDK.DisableToxicity);
         }
     }
 }

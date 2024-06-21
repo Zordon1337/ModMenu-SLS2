@@ -73,7 +73,7 @@ namespace ModMenu_SLS
                 
             }
             Modules.Noclip.Run();
-            
+            Modules.DisableToxicity.Run();
             calls++;
             if(calls > 150)
             {

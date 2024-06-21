@@ -37,6 +37,9 @@ namespace ModMenu_SLS
             TP.position = Where;
         }
         public static bool IsInGame => CarManager.Instance != null;
+
+        public static bool DisableToxicity = false;
+
         public static bool bNoNeeds = false;
         public static bool bNoClip = false;
         public static GUIStyle ButtonStyle = new GUIStyle();
