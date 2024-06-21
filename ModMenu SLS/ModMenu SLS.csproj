@@ -96,6 +96,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modules\BetterDonations.cs" />
     <Compile Include="Modules\CountarStrika\InfinityJump.cs" />
     <Compile Include="Modules\CountarStrika\InfDamage.cs" />
     <Compile Include="Modules\CountarStrika\InfAmmo.cs" />

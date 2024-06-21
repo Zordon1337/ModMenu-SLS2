@@ -39,7 +39,7 @@ namespace ModMenu_SLS
         public static bool IsInGame => CarManager.Instance != null;
 
         public static bool DisableToxicity = false;
-
+        public static bool BetterDonations = false;
         public static bool bNoNeeds = false;
         public static bool bNoClip = false;
         public static GUIStyle ButtonStyle = new GUIStyle();

@@ -42,6 +42,8 @@ namespace ModMenu_SLS.UI
                 SDK.Time.time = 12f;
             }
             SDK.DisableToxicity = GUILayout.Toggle(SDK.DisableToxicity, "Disable stream toxicity: " + SDK.DisableToxicity);
+
+            SDK.BetterDonations = GUILayout.Toggle(SDK.BetterDonations, "Better donations: " + SDK.BetterDonations);
         }
     }
 }

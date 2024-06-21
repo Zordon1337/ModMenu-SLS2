@@ -6,6 +6,11 @@ namespace ModMenu_SLS.UI
     {
         public static void Load()
         {
+            
+
+            if (!ModMenu_SLS.Shit.isMenuOpen || !SDK.IsInGame)
+                return;
+
             // Color Palette for Light Theme
             Color textboxColor = new Color(0.98f, 0.94f, 0.90f);    // Light beige
             Color buttonBackgroundColor = new Color(0.75f, 0.75f, 0.75f);     // Light gray for button background
@@ -38,11 +43,6 @@ namespace ModMenu_SLS.UI
             SDK.CheckboxStyle.alignment = TextAnchor.MiddleLeft;
             SDK.ButtonStyleNavBar = new GUIStyle(SDK.ButtonStyle);
             SDK.ButtonStyleNavBar.fixedHeight = 35;
-
-            if (!ModMenu_SLS.Shit.isMenuOpen || !SDK.IsInGame)
-                return;
-
-           
             GUI.Window(0, new Rect(Screen.width / 2 - 262, Screen.height / 2 - 300, 525, 600), Window.Render, "SLS mod menu", SDK.WindowStyle);
         }
     }

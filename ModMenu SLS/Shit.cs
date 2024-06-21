@@ -74,6 +74,7 @@ namespace ModMenu_SLS
             }
             Modules.Noclip.Run();
             Modules.DisableToxicity.Run();
+            Modules.BetterDonations.Run();
             calls++;
             if(calls > 150)
             {
