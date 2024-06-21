@@ -91,6 +91,9 @@
     <Reference Include="UnityEngine.UIModule">
       <HintPath>D:\SteamLibrary\steamapps\common\Streamer Life Simulator\windows_content\Streamer Life Simulator_Data\Managed\UnityEngine.UIModule.dll</HintPath>
     </Reference>
+    <Reference Include="UrGUI">
+      <HintPath>C:\Users\ZRD\Downloads\UrGUI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modules\CountarStrika\InfinityJump.cs" />

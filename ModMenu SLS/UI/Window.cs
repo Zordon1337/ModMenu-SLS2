@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ModMenu_SLS.UI
 {
@@ -11,37 +6,45 @@ namespace ModMenu_SLS.UI
     {
         public static void Render(int wid)
         {
-            // render navbar
-            if (GUI.Button(new Rect(0, 15, 175, 50), "Teleporter", SDK.ButtonStyle))
+
+            
+            Color navbarBackgroundColor = new Color(0.7f, 0.7f, 0.7f, 0.5f); // Light gray with 50% opacity
+            Color contentBackgroundColor = new Color(0.9f, 0.9f, 0.9f); // Light gray
+            GUILayout.BeginArea(new Rect(0, 0, 175, 600));
+            GUI.DrawTexture(new Rect(0, 0, 175, 600), SDK.MakeTexture(2, 2, navbarBackgroundColor), ScaleMode.StretchToFill);
+            GUILayout.Label("MODMENU SLS - zrd.ovh", SDK.TextStyle);
+            if (GUILayout.Button("Teleporter", SDK.ButtonStyleNavBar, GUILayout.ExpandWidth(true)))
             {
                 SDK.page = 0;
             }
-            if (GUI.Button(new Rect(175, 15, 175, 50), "Player Stats", SDK.ButtonStyle))
+            if (GUILayout.Button("Player Stats", SDK.ButtonStyleNavBar, GUILayout.ExpandWidth(true)))
             {
                 SDK.page = 1;
             }
-            if (GUI.Button(new Rect(350, 15, 175, 50), "Misc", SDK.ButtonStyle))
+            if (GUILayout.Button("Misc", SDK.ButtonStyleNavBar, GUILayout.ExpandWidth(true)))
             {
                 SDK.page = 2;
             }
-            GUI.BeginGroup(new Rect(0, 65, 525, 600 - 65)); // yes i can't do math
-            GUILayout.Space(10f);
+            GUILayout.EndArea();
+            GUILayout.BeginArea(new Rect(175, 0, 525 - 175, 600));
+            GUI.DrawTexture(new Rect(0, 0, 525 - 175, 600), SDK.MakeTexture(2, 2, contentBackgroundColor), ScaleMode.StretchToFill);
+
+            GUILayout.Space(20f);
+
             if (SDK.page == 0)
             {
                 UI.Teleporter.Render();
-
-
             }
-            if (SDK.page == 1)
+            else if (SDK.page == 1)
             {
                 UI.PlayerStats.Render();
             }
-            if (SDK.page == 2)
+            else if (SDK.page == 2)
             {
-
                 UI.Misc.Render();
             }
-            GUI.EndGroup();
+
+            GUILayout.EndArea();
         }
     }
 }

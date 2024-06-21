@@ -6,17 +6,22 @@ using System.Collections.Generic;
 using ModMenu_SLS;
 using ModMenu_SLS.UI;
 using static RootMotion.FinalIK.AimPoser;
+using UrGUI.GUIWindow;
+using System;
+
 namespace ModMenu_SLS
 {
     class Shit:MelonMod
     {
         
         public static bool isMenuOpen = false;
-        
 
-        
+
+        private GUIWindow window;
+
         public override void OnGUI()
         {
+            
             ThemeLoader.Load();
             Watermark.Render();
            
@@ -24,6 +29,7 @@ namespace ModMenu_SLS
         int calls = 0;
         public override void OnUpdate()
         {
+
             // Check if the Insert key is pressed
             if (Input.GetKeyDown(KeyCode.Insert))
             {
@@ -37,6 +43,7 @@ namespace ModMenu_SLS
                 {
                     Cursor.lockState = CursorLockMode.Locked;
                     Cursor.visible = false;
+
                 }
             }
 
@@ -71,9 +78,9 @@ namespace ModMenu_SLS
             if(calls > 150)
             {
                 calls = 0;
-                SDK.Time = Object.FindObjectOfType<TimeManager>();
-                SDK.PlayerController = Object.FindObjectOfType<PlayerController>();
-                SDK.CM = Object.FindObjectOfType<CarManager>();
+                SDK.Time = UnityEngine.Object.FindObjectOfType<TimeManager>();
+                SDK.PlayerController = UnityEngine.Object.FindObjectOfType<PlayerController>();
+                SDK.CM = UnityEngine.Object.FindObjectOfType<CarManager>();
                 if (SDK.bNoNeeds)
                 {
                     var stats = PlayerStats.Instance;

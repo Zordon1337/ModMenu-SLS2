@@ -22,11 +22,15 @@ namespace ModMenu_SLS.UI
             style.normal.background = SDK.MakeTexture(2, 2, Color.red);
             style.onHover.background = SDK.MakeTexture(2, 2, Color.red);
             style.hover.background = SDK.MakeTexture(2, 2, Color.red);
-            GUILayout.Window(420, new Rect(15, 15, 260, 25), Window, "");
+            GUILayout.Window(420, new Rect(15, 15, 260, 25), Window, "",SDK.WindowStyle);
         }
         public static void Window(int wid)
         {
-            GUILayout.Label($"ModMenu SLS - {Properties.Resources.BuildDate}");
+
+
+            SDK.TextStyle.normal.textColor = Color.black;
+            SDK.TextStyle.alignment = TextAnchor.MiddleCenter;
+            GUILayout.Label($"ModMenu SLS - {Properties.Resources.BuildDate}",SDK.TextStyle);
         }
     }
 }
