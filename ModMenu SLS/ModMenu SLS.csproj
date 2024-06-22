@@ -118,7 +118,7 @@
     <Compile Include="UI\Teleporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SDK.cs" />
-    <Compile Include="Shit.cs" />
+    <Compile Include="Entry.cs" />
     <Compile Include="UI\ThemeLoader.cs" />
     <Compile Include="UI\Watermark.cs" />
     <Compile Include="UI\Window.cs" />

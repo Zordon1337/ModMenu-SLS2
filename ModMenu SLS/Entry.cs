@@ -11,7 +11,7 @@ using System;
 
 namespace ModMenu_SLS
 {
-    class Shit:MelonMod
+    class Entry:MelonMod
     {
         
         public static bool isMenuOpen = false;

@@ -8,7 +8,7 @@ namespace ModMenu_SLS.UI
         {
             
 
-            if (!ModMenu_SLS.Shit.isMenuOpen || !SDK.IsInGame)
+            if (!ModMenu_SLS.Entry.isMenuOpen || !SDK.IsInGame)
                 return;
 
             // Color Palette for Light Theme

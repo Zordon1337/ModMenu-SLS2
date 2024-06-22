@@ -36,5 +36,5 @@ using ModMenu_SLS;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-[assembly: MelonInfo(typeof(ModMenu_SLS.Shit), "SLS Mod Menu", "idk", "Zordon1337")]
+[assembly: MelonInfo(typeof(ModMenu_SLS.Entry), "SLS Mod Menu", "idk", "Zordon1337")]
 [assembly: MelonGame("Cheesecake Dev", "Streamer Life Simulator")]
