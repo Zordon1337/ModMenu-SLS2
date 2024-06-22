@@ -33,6 +33,8 @@
                 SDK.Wallhack = GUILayout.Toggle(SDK.Wallhack, $"Wallhack(requires to have bought and running Wall-Hack app from DeebWeb): {SDK.Wallhack}", SDK.CheckboxStyle);
                 SDK.InfinityJump = GUILayout.Toggle(SDK.InfinityJump, $"Infinity Jump: {SDK.InfinityJump}", SDK.CheckboxStyle);
                 SDK.CounterHouse = GUILayout.Toggle(SDK.CounterHouse, $"Spawn on normal map: {SDK.CounterHouse}",SDK.CheckboxStyle);
+                SDK.bInstantMatchmaking = GUILayout.Toggle(SDK.bInstantMatchmaking, $"Instant Matchmaking: {SDK.bInstantMatchmaking}", SDK.CheckboxStyle);
+
             }
         }
     }

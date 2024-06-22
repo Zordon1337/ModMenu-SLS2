@@ -66,6 +66,7 @@ namespace ModMenu_SLS
                     Modules.CountarStrika.InfinityJump.Run();
                     Modules.CountarStrika.Wallhack.Run();
                     Modules.CountarStrika.SpawnerExploits.Run();
+                    Modules.CountarStrika.InstantMatchmaking.Run();
                 }
                 
             }
