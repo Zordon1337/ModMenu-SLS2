@@ -38,7 +38,8 @@ namespace ModMenu_SLS.UI
                         { "Suv", SDK.CM.suvCar.transform.position},
                         {" Porsche", SDK.CM.porscheCar.transform.position },
                         { "Gas Station 1", new Vector3(722.7f, 22.2f, 522.7f) },
-                        { "Gas Station 2", new Vector3(434.8f, 19.0f, 1158.9f)}
+                        { "Gas Station 2", new Vector3(434.8f, 19.0f, 1158.9f)},
+                        {"Zamazor1", new Vector3(1288.0f, 28.6f, 1891.8f) }
                 };
 
             foreach (var Plrdestination in PlayerToteleportDestinations)

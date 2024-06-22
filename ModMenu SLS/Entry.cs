@@ -8,7 +8,7 @@ using ModMenu_SLS.UI;
 using static RootMotion.FinalIK.AimPoser;
 using UrGUI.GUIWindow;
 using System;
-
+using HarmonyLib;
 namespace ModMenu_SLS
 {
     class Entry:MelonMod
@@ -73,7 +73,6 @@ namespace ModMenu_SLS
                 
             }
             Modules.Noclip.Run();
-            Modules.DisableToxicity.Run();
             Modules.BetterDonations.Run();
             calls++;
             if(calls > 150)
