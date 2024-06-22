@@ -37,7 +37,6 @@ namespace ModMenu_SLS
             TP.position = Where;
         }
         public static bool IsInGame => CarManager.Instance != null;
-
         public static bool DisableToxicity = false;
         public static bool BetterDonations = false;
         public static bool bNoNeeds = false;

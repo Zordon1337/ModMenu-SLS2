@@ -18,8 +18,8 @@ namespace ModMenu_SLS.Modules
             if (PlayerPrefs.GetInt("streamsuprisedonateskill") == 0)
                 PlayerPrefs.SetInt("streamsuprisedonateskill", 1);
 
-            PlayerPrefs.SetInt("donateskill", PlayerPrefs.GetInt("donateskill") * 25);
-            PlayerPrefs.SetInt("streamsuprisedonateskill", PlayerPrefs.GetInt("streamsuprisedonateskill") * 25);
+            PlayerPrefs.SetInt("donateskill", 1 * 25);
+            PlayerPrefs.SetInt("streamsuprisedonateskill", 1 * 25);
         }
     }
 }
