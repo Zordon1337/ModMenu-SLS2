@@ -24,7 +24,9 @@ namespace ModMenu_SLS
             
             ThemeLoader.Load();
             Watermark.Render();
-           
+            GUILayout.Label(PlayerPrefs.GetFloat("streamtoxiccount").ToString());
+            GUILayout.Label(PlayerPrefs.GetInt("donateskill").ToString());
+            GUILayout.Label(PlayerPrefs.GetInt("streamsuprisedonateskill").ToString());
         }
         int calls = 0;
         public override void OnUpdate()
