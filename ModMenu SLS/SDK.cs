@@ -37,8 +37,7 @@ namespace ModMenu_SLS
             TP.position = Where;
         }
         public static bool IsInGame => CarManager.Instance != null;
-        public static bool DisableToxicity = false;
-        public static bool BetterDonations = false;
+
         public static bool bNoNeeds = false;
         public static bool bNoClip = false;
         public static bool TrashSkiller = false;
@@ -62,7 +61,7 @@ namespace ModMenu_SLS
         public static float banktoadd = 0;
         public static float cardtoadd = 0;
         public static float speed = 25f;
-        public static int page = 1;
+        public static int page = 0;
         public static bool InfAmmo = false;
         public static bool InfDamage = false;
         public static bool InfHealth = false;

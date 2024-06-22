@@ -11,7 +11,6 @@ namespace ModMenu_SLS.UI
             if (!ModMenu_SLS.Entry.isMenuOpen || !SDK.IsInGame)
                 return;
 
-            // Color Palette for Light Theme
             Color textboxColor = new Color(0.98f, 0.94f, 0.90f);    // Light beige
             Color buttonBackgroundColor = new Color(0.75f, 0.75f, 0.75f);     // Light gray for button background
             Color buttonTextColor = Color.black;     // Black text for button
@@ -33,12 +32,10 @@ namespace ModMenu_SLS.UI
             SDK.WindowStyle.hover.background = SDK.MakeTexture(2, 2, windowBackgroundColor);
             SDK.WindowStyle.hover.textColor = Color.black;
             SDK.WindowStyle.alignment = TextAnchor.UpperCenter;
-            SDK.TextBoxStyle.normal.background = SDK.MakeTexture(2, 2, textboxColor);
-            SDK.TextBoxStyle.active.background = SDK.MakeTexture(2, 2, textboxColor);
-            SDK.TextBoxStyle.hover.background = SDK.MakeTexture(2, 2, textboxColor);
             SDK.TextBoxStyle.normal.textColor = Color.black;
             SDK.TextBoxStyle.active.textColor = Color.black;
             SDK.TextBoxStyle.hover.textColor = Color.black;
+
             SDK.CheckboxStyle = new GUIStyle(SDK.ButtonStyle);
             SDK.CheckboxStyle.alignment = TextAnchor.MiddleLeft;
             SDK.ButtonStyleNavBar = new GUIStyle(SDK.ButtonStyle);

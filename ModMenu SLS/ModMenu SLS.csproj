@@ -45,6 +45,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -96,7 +97,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modules\BetterDonations.cs" />
     <Compile Include="Modules\CountarStrika\InfinityJump.cs" />
     <Compile Include="Modules\CountarStrika\InfDamage.cs" />
     <Compile Include="Modules\CountarStrika\InfAmmo.cs" />
@@ -105,7 +105,6 @@
     <Compile Include="Modules\CountarStrika\NoSpread.cs" />
     <Compile Include="Modules\CountarStrika\Speedhack.cs" />
     <Compile Include="Modules\CountarStrika\Wallhack.cs" />
-    <Compile Include="Modules\DisableToxicity.cs" />
     <Compile Include="Modules\InfinityTrashMotivation.cs" />
     <Compile Include="Modules\Noclip.cs" />
     <Compile Include="Modules\CountarStrika\RapidFire.cs" />
@@ -131,6 +130,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

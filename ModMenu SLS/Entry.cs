@@ -21,9 +21,9 @@ namespace ModMenu_SLS
 
         public override void OnGUI()
         {
-            
             ThemeLoader.Load();
             Watermark.Render();
+            GUI.DragWindow();
         }
         int calls = 0;
         public override void OnUpdate()
@@ -70,7 +70,6 @@ namespace ModMenu_SLS
                 
             }
             Modules.Noclip.Run();
-            Modules.BetterDonations.Run();
             Modules.InfinityTrashMotivation.Run();
             calls++;
             if(calls > 150)

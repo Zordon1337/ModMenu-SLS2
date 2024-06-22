@@ -61,7 +61,7 @@ namespace ModMenu_SLS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 21/06/2024 18:21:24.50 
+        ///   Looks up a localized string similar to 22/06/2024 21:41:16.50 
         ///.
         /// </summary>
         internal static string BuildDate {
