@@ -106,6 +106,7 @@
     <Compile Include="Modules\CountarStrika\Speedhack.cs" />
     <Compile Include="Modules\CountarStrika\Wallhack.cs" />
     <Compile Include="Modules\DisableToxicity.cs" />
+    <Compile Include="Modules\InfinityTrashMotivation.cs" />
     <Compile Include="Modules\Noclip.cs" />
     <Compile Include="Modules\CountarStrika\RapidFire.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

@@ -24,9 +24,6 @@ namespace ModMenu_SLS
             
             ThemeLoader.Load();
             Watermark.Render();
-            GUILayout.Label(PlayerPrefs.GetFloat("streamtoxiccount").ToString());
-            GUILayout.Label(PlayerPrefs.GetInt("donateskill").ToString());
-            GUILayout.Label(PlayerPrefs.GetInt("streamsuprisedonateskill").ToString());
         }
         int calls = 0;
         public override void OnUpdate()
@@ -74,6 +71,7 @@ namespace ModMenu_SLS
             }
             Modules.Noclip.Run();
             Modules.BetterDonations.Run();
+            Modules.InfinityTrashMotivation.Run();
             calls++;
             if(calls > 150)
             {
@@ -81,6 +79,7 @@ namespace ModMenu_SLS
                 SDK.Time = UnityEngine.Object.FindObjectOfType<TimeManager>();
                 SDK.PlayerController = UnityEngine.Object.FindObjectOfType<PlayerController>();
                 SDK.CM = UnityEngine.Object.FindObjectOfType<CarManager>();
+                SDK.trashp = UnityEngine.Object.FindObjectOfType<TrashPanel>();
                 if (SDK.bNoNeeds)
                 {
                     var stats = PlayerStats.Instance;

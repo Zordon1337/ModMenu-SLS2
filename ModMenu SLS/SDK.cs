@@ -41,6 +41,8 @@ namespace ModMenu_SLS
         public static bool BetterDonations = false;
         public static bool bNoNeeds = false;
         public static bool bNoClip = false;
+        public static bool TrashSkiller = false;
+        public static bool InfinityTrashMotivation = false;
         public static GUIStyle ButtonStyle = new GUIStyle();
         public static GUIStyle ButtonStyleNavBar = new GUIStyle();
         public static GUIStyle WindowStyle = new GUIStyle();
@@ -55,6 +57,7 @@ namespace ModMenu_SLS
         public static CountarStrika CountarStrika;
         public static CarManager CM;
         public static CounterAi[] ai;
+        public static TrashPanel trashp;
         public static float wallettoadd = 0;
         public static float banktoadd = 0;
         public static float cardtoadd = 0;
