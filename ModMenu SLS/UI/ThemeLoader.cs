@@ -43,6 +43,8 @@ namespace ModMenu_SLS.UI
             SDK.CheckboxStyle.alignment = TextAnchor.MiddleLeft;
             SDK.ButtonStyleNavBar = new GUIStyle(SDK.ButtonStyle);
             SDK.ButtonStyleNavBar.fixedHeight = 35;
+            SDK.TextStyle.normal.textColor = Color.black;
+            SDK.TextStyle.alignment = TextAnchor.MiddleCenter;
             GUI.Window(0, new Rect(Screen.width / 2 - 262, Screen.height / 2 - 300, 525, 600), Window.Render, "SLS mod menu", SDK.WindowStyle);
         }
     }

@@ -29,8 +29,6 @@ namespace ModMenu_SLS
         int calls = 0;
         public override void OnUpdate()
         {
-
-            // Check if the Insert key is pressed
             if (Input.GetKeyDown(KeyCode.Insert))
             {
                 isMenuOpen = !isMenuOpen;
