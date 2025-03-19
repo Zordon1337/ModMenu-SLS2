@@ -12,7 +12,7 @@ namespace ModMenu_SLS.UI
         public static void Render()
         {
             SDK.sSetFollowers = GUILayout.TextField(SDK.sSetFollowers, SDK.WindowStyle);
-            if (GUILayout.Button("Set Followers"))
+            if (GUILayout.Button("Set Followers", SDK.WindowStyle))
             {
                 if (GameManager.Instance != null)
                 {
