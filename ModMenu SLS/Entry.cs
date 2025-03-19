@@ -60,7 +60,6 @@ namespace ModMenu_SLS
                 SDK.ai_dm = GameObject.FindObjectsOfType<CamperAI_DeathMatch>();
                 SDK.csm = GameObject.FindObjectOfType<CamperStrikeManager>();
 
-
                 if (SDK.csm != null)
                 {
                     if (SDK.csm.csPlayer != null && SDK.csm.csPlayer.kalash != null)

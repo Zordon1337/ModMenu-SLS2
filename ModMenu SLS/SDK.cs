@@ -22,14 +22,15 @@ namespace ModMenu_SLS
             result.Apply();
             return result;
         }
-        public static void TeleportPlayer(PG.PlayerController pc, Vector3 pos)
+        public static void TeleportPlayer(PlayerMotor pc, Vector3 pos)
+
         {
             /*creating dummy transform because we can't directly provide Vector3 in the teleport function
             Transform dummy;
             dummy = new GameObject().transform;
             dummy.position = pos;
             nvrmind we can provide vector3*/
-            //pc.SetNewPositionAndRotation(pos);
+            pc.player.Teleport(pos);
         }
         public static void TeleportItem(Transform TP, Vector3 Where)
         {
