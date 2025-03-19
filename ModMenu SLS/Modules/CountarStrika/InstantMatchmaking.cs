@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace ModMenu_SLS.Modules.CountarStrika
 {
@@ -12,7 +13,7 @@ namespace ModMenu_SLS.Modules.CountarStrika
         {
             if (!SDK.bInstantMatchmaking)
                 return;
-            SDK.CountarStrika.matchmakingTarget = 0;
+
         }
     }
 }

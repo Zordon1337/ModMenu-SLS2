@@ -13,12 +13,13 @@ namespace ModMenu_SLS.Modules.CountarStrika
         public static void Run()
         {
 
-            if (SDK.CountarStrika != null && SDK.InfinityJump)
+            var csm = GameObject.FindObjectOfType<CamperStrikeManager>();
+            if (csm != null && SDK.InfinityJump)
             {
-                if (SDK.CountarStrika.csPlayer == null)
+                if (csm.csPlayer == null)
                     return;
 
-                var CPlayer = SDK.CountarStrika.csPlayer;
+                var CPlayer = csm.csPlayer;
                 CPlayer.groundDistance = 999999f;
                 
             }

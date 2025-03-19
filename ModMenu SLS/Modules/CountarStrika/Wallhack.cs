@@ -14,17 +14,20 @@ namespace ModMenu_SLS.Modules.CountarStrika
 
             if(SDK.Wallhack)
             {
-                var whinst = GameObject.FindObjectOfType<WallHack>();
-                whinst.ctEnemy1.enabled = true;
-                whinst.ctEnemy2.enabled = true;
-                whinst.ctEnemy3.enabled = true;
-                whinst.ctEnemy4.enabled = true;
-                whinst.ctEnemy5.enabled = true;
-                whinst.tEnemy1.enabled = true;
-                whinst.tEnemy2.enabled = true;
-                whinst.tEnemy3.enabled = true;
-                whinst.tEnemy4.enabled = true;
-                whinst.tEnemy5.enabled = true;
+                var test = GameObject.FindObjectsOfType<CamperAI_DeathMatch>();
+                foreach(var c in test)
+                {
+                    if(c.csPlayer != null && c.health > 0)
+                    {
+                        var w2s = Camera.main.WorldToScreenPoint(c.csPlayer.transform.position);
+
+                        if (w2s != null)
+                        {
+                            GUI.Label(new Rect(w2s.x, Screen.height - w2s.y, 300, 300),"Player");
+                        }
+                    }
+                }
+                
             }
         }
     }

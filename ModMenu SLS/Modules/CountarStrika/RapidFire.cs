@@ -11,13 +11,14 @@ namespace ModMenu_SLS.Modules
     {
         public static void Run()
         {
-            
-            if(SDK.CountarStrika != null && SDK.RapidFire)
+
+            var csm = GameObject.FindObjectOfType<CamperStrikeManager>();
+            if (csm != null && SDK.RapidFire)
             {
-                if (SDK.CountarStrika.csPlayer == null)
+                if (csm.csPlayer == null)
                     return;
 
-                var CPlayer = SDK.CountarStrika.csPlayer;
+                var CPlayer = csm.csPlayer;
                 if (CPlayer.kalash == null)
                     return;
                 var weapons = SDK.weapons;

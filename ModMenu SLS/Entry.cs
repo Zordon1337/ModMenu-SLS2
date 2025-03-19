@@ -5,8 +5,7 @@ using System.Reflection.Emit;
 using System.Collections.Generic;
 using ModMenu_SLS;
 using ModMenu_SLS.UI;
-using static RootMotion.FinalIK.AimPoser;
-using UrGUI.GUIWindow;
+
 using System;
 using HarmonyLib;
 namespace ModMenu_SLS
@@ -17,7 +16,6 @@ namespace ModMenu_SLS
         public static bool isMenuOpen = false;
 
 
-        private GUIWindow window;
 
         public override void OnGUI()
         {
@@ -44,19 +42,17 @@ namespace ModMenu_SLS
                 }
             }
 
-            SDK.CountarStrika = GameObject.FindObjectOfType<CountarStrika>();
-            if (SDK.CountarStrika != null)
+            SDK.csm = GameObject.FindObjectOfType<CamperStrikeManager>();
+            if (SDK.csm != null)
             {
-                if(SDK.CountarStrika.csPlayer != null && SDK.CountarStrika.csPlayer.kalash != null)
+                if(SDK.csm.csPlayer != null && SDK.csm.csPlayer.kalash != null)
                 {
-                    SDK.weapons[0] = SDK.CountarStrika.csPlayer.kalash;
-                    SDK.weapons[1] = SDK.CountarStrika.csPlayer.shotgun;
-                    SDK.weapons[2] = SDK.CountarStrika.csPlayer.smg;
-                    SDK.weapons[3] = SDK.CountarStrika.csPlayer.m16;
-                    SDK.weapons[4] = SDK.CountarStrika.csPlayer.pistol;
-                    SDK.weapons[5] = SDK.CountarStrika.csPlayer.deagle;
-                    if(GameObject.FindObjectsOfType<CounterAi>() != null)
-                        SDK.ai = GameObject.FindObjectsOfType<CounterAi>();
+                    SDK.weapons[0] = SDK.csm.csPlayer.kalash;
+                    SDK.weapons[1] = SDK.csm.csPlayer.shotgun;
+                    SDK.weapons[2] = SDK.csm.csPlayer.smg;
+                    SDK.weapons[3] = SDK.csm.csPlayer.m16;
+                    SDK.weapons[4] = SDK.csm.csPlayer.pistol;
+                    SDK.weapons[5] = SDK.csm.csPlayer.deagle;
                     Modules.RapidFire.Run();
                     Modules.CountarStrika.InfAmmo.Run();
                     Modules.CountarStrika.InfDamage.Run();
@@ -71,23 +67,16 @@ namespace ModMenu_SLS
                 
             }
             Modules.Noclip.Run();
-            Modules.InfinityTrashMotivation.Run();
             calls++;
             if(calls > 150)
             {
                 calls = 0;
-                SDK.Time = UnityEngine.Object.FindObjectOfType<TimeManager>();
-                SDK.PlayerController = UnityEngine.Object.FindObjectOfType<PlayerController>();
-                SDK.CM = UnityEngine.Object.FindObjectOfType<CarManager>();
-                SDK.trashp = UnityEngine.Object.FindObjectOfType<TrashPanel>();
                 if (SDK.bNoNeeds)
                 {
-                    var stats = PlayerStats.Instance;
-                    stats.health = 100;
-                    stats.energy = 100;
-                    stats.hunger = 100;
-                    stats.hygiene = 100;
-                    stats.toilet = 0;
+                    GameManager.Instance.awekingTime = 0;
+                    GameManager.Instance.hungerTime = 0;
+                    GameManager.Instance.notShowerTime = 0;
+                    GameManager.Instance.toiletTime = 0;
                 }
 
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace ModMenu_SLS.Modules.CountarStrika
 {
@@ -11,12 +12,13 @@ namespace ModMenu_SLS.Modules.CountarStrika
         public static void Run()
         {
 
-            if (SDK.CountarStrika != null && SDK.NoSpread)
+            var csm = GameObject.FindObjectOfType<CamperStrikeManager>();
+            if (csm != null && SDK.NoSpread)
             {
-                if (SDK.CountarStrika.csPlayer == null)
+                if (csm.csPlayer == null)
                     return;
 
-                var CPlayer = SDK.CountarStrika.csPlayer;
+                var CPlayer = csm.csPlayer;
                 if (CPlayer.kalash == null)
                     return;
                 var weapons = SDK.weapons;

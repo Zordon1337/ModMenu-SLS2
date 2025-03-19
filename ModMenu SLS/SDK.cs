@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using static Michsky.UI.ModernUIPack.UIManagerButton;
 
 namespace ModMenu_SLS
 {
@@ -23,20 +22,20 @@ namespace ModMenu_SLS
             result.Apply();
             return result;
         }
-        public static void TeleportPlayer(PlayerController pc, Vector3 pos)
+        public static void TeleportPlayer(PG.PlayerController pc, Vector3 pos)
         {
             /*creating dummy transform because we can't directly provide Vector3 in the teleport function
             Transform dummy;
             dummy = new GameObject().transform;
             dummy.position = pos;
             nvrmind we can provide vector3*/
-            pc.SetNewPositionAndRotation(pos);
+            //pc.SetNewPositionAndRotation(pos);
         }
         public static void TeleportItem(Transform TP, Vector3 Where)
         {
             TP.position = Where;
         }
-        public static bool IsInGame => CarManager.Instance != null;
+        public static bool IsInGame => GameManager.Instance != null;
         public static bool bInstantMatchmaking = false;
         public static bool bNoNeeds = false;
         public static bool bNoClip = false;
@@ -49,17 +48,13 @@ namespace ModMenu_SLS
         public static GUIStyle CheckboxStyle = new GUIStyle();
         public static GUIStyle TextStyle = new GUIStyle();
         public static string posname = "";
-        public static TimeManager Time;
-        public static PlayerController PlayerController;
-
+        //public static TimeManager Time;
+        //public static PlayerController PlayerController;
+        public static CamperStrikeManager csm;
         public static Weapon[] weapons = new Weapon[] { new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon()};
-        public static CountarStrika CountarStrika;
         public static CarManager CM;
-        public static CounterAi[] ai;
-        public static TrashPanel trashp;
-        public static float wallettoadd = 0;
-        public static float banktoadd = 0;
-        public static float cardtoadd = 0;
+        public static GameManager GameManager;
+        public static float moneytoadd = 0;
         public static float speed = 25f;
         public static int page = 0;
         public static bool InfAmmo = false;

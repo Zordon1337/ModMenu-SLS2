@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Michsky.UI.ModernUIPack.UIManagerButton;
 using UnityEngine;
 
 namespace ModMenu_SLS.UI
@@ -12,7 +11,7 @@ namespace ModMenu_SLS.UI
     {
         public static void Render()
         {
-            Dictionary<string, Vector3> PlayerToteleportDestinations = new Dictionary<string, Vector3>
+            /*Dictionary<string, Vector3> PlayerToteleportDestinations = new Dictionary<string, Vector3>
                 {
                         {"House 1", new Vector3(1304.0f, 29.4f, 1851.1f)},
                         {"House 2", new Vector3(961.4f, 20.9f, 955.2f)},
@@ -64,7 +63,7 @@ namespace ModMenu_SLS.UI
                 {
                     SDK.TeleportItem(Plrdestination.Value, SDK.PlayerController.playerRay.transform.position);
                 }
-            }
+            }*/
         }
     }
 }

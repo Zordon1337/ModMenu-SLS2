@@ -11,12 +11,12 @@ namespace ModMenu_SLS.Modules.CountarStrika
         public static void Run()
         {
 
-            if (SDK.CountarStrika != null && SDK.InfAmmo)
+            if (SDK.csm != null && SDK.InfAmmo)
             {
-                if (SDK.CountarStrika.csPlayer == null)
+                if (SDK.csm.csPlayer == null)
                     return;
 
-                var CPlayer = SDK.CountarStrika.csPlayer;
+                var CPlayer = SDK.csm.csPlayer;
                 if (CPlayer.kalash == null)
                     return;
                 var weapons = SDK.weapons;

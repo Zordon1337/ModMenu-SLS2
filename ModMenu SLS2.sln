@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33927.289
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModMenu SLS", "ModMenu SLS\ModMenu SLS.csproj", "{2C3717FD-9DF9-4F9E-B7B6-BAE99C537A28}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModMenu SLS2", "ModMenu SLS\ModMenu SLS2.csproj", "{2C3717FD-9DF9-4F9E-B7B6-BAE99C537A28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

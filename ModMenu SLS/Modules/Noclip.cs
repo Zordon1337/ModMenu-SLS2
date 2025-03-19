@@ -11,7 +11,7 @@ namespace ModMenu_SLS.Modules
     {
         public static void Run()
         {
-            if (SDK.PlayerController != null)
+            /*if (SDK.PlayerController != null)
             {
                 if (SDK.bNoClip)
                 {
@@ -41,7 +41,7 @@ namespace ModMenu_SLS.Modules
                         SDK.TeleportPlayer(SDK.PlayerController, new Vector3(playerTransformPosVec.x - SDK.PlayerController.playerRay.playerMainCamera.transform.right.x * SDK.speed, playerTransformPosVec.y, playerTransformPosVec.z - SDK.PlayerController.playerRay.playerMainCamera.transform.right.z * SDK.speed));
                     }
                 }
-            }
+            }*/
         }
     }
 }
