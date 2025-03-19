@@ -108,6 +108,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI\Fakegram.cs" />
     <Compile Include="UI\Misc.cs" />
     <Compile Include="UI\PlayerStats.cs" />
     <Compile Include="UI\Teleporter.cs" />

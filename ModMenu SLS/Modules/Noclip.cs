@@ -11,7 +11,7 @@ namespace ModMenu_SLS.Modules
     {
         public static void Run()
         {
-            if (GameManager.Instance.playerMotor != null)
+            if (GameManager.Instance != null)
             {
                 if (SDK.bNoClip)
                 {

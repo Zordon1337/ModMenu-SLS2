@@ -21,9 +21,13 @@ namespace ModMenu_SLS.UI
             {
                 SDK.page = 1;
             }
-            if (GUILayout.Button("Misc", SDK.ButtonStyleNavBar, GUILayout.ExpandWidth(true)))
+            if (GUILayout.Button("FakeGram", SDK.ButtonStyleNavBar, GUILayout.ExpandWidth(true)))
             {
                 SDK.page = 2;
+            }
+            if (GUILayout.Button("Misc", SDK.ButtonStyleNavBar, GUILayout.ExpandWidth(true)))
+            {
+                SDK.page = 3;
             }
             GUILayout.EndArea();
             GUILayout.BeginArea(new Rect(175, 0, 525 - 175, 600));
@@ -40,6 +44,10 @@ namespace ModMenu_SLS.UI
                 UI.PlayerStats.Render();
             }
             else if (SDK.page == 2)
+            {
+                UI.Fakegram.Render();
+            }
+            else if (SDK.page == 3)
             {
                 UI.Misc.Render();
             }

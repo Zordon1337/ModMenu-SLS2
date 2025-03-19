@@ -46,7 +46,7 @@ namespace ModMenu_SLS
         public static GUIStyle TextBoxStyle = new GUIStyle();
         public static GUIStyle CheckboxStyle = new GUIStyle();
         public static GUIStyle TextStyle = new GUIStyle();
-        public static string posname = "";
+        public static string posname = "here goes position name ps. locations will be stored in C:/MODMENU_SLS";
         //public static TimeManager Time;
         //public static PlayerController PlayerController;
         public static CamperStrikeManager csm;
@@ -66,5 +66,7 @@ namespace ModMenu_SLS
         public static bool InfinityJump = false;
         public static bool Wallhack = false;
         public static bool CounterHouse = false;
+
+        public static string sSetFollowers = "Followers amount";
     }
 }

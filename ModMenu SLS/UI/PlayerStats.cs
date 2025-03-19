@@ -14,7 +14,6 @@ namespace ModMenu_SLS.UI
             //cardtoadd = PlayerPrefs.GetFloat("cardmoney");
             //wallettoadd = PlayerPrefs.GetFloat("money");
             //banktoadd = PlayerPrefs.GetFloat("bankmoney");
-            SDK.bNoNeeds = GUILayout.Toggle(SDK.bNoNeeds, $"Disable Needs: {SDK.bNoNeeds}", SDK.CheckboxStyle);
             GUILayout.Space(10f);
             SDK.moneytoadd = float.Parse(GUILayout.TextField(SDK.moneytoadd.ToString(), SDK.TextBoxStyle));
             if (GUILayout.Button("Add Money", SDK.ButtonStyle))
@@ -31,6 +30,8 @@ namespace ModMenu_SLS.UI
             {
                 GameManager.Instance.hour = 12f;
             }
+
+            SDK.bNoNeeds = GUILayout.Toggle(SDK.bNoNeeds, $"Infinite Energy: {SDK.bNoNeeds}", SDK.CheckboxStyle);
         }
     }
 }
