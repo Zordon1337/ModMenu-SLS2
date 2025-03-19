@@ -53,7 +53,8 @@ namespace ModMenu_SLS
         public static CamperStrikeManager csm;
         public static Weapon[] weapons = new Weapon[] { new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon(), new Weapon()};
         public static CarManager CM;
-        public static GameManager GameManager;
+        public static CamperAI_DeathMatch[] ai_dm;
+        public static CamperAI[] ai;
         public static float moneytoadd = 0;
         public static float speed = 25f;
         public static int page = 0;

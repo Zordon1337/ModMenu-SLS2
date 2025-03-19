@@ -22,6 +22,7 @@ namespace ModMenu_SLS
             ThemeLoader.Load();
             Watermark.Render();
             GUI.DragWindow();
+            Modules.CountarStrika.Wallhack.Run();
         }
         int calls = 0;
         public override void OnUpdate()
@@ -41,31 +42,7 @@ namespace ModMenu_SLS
 
                 }
             }
-
-            SDK.csm = GameObject.FindObjectOfType<CamperStrikeManager>();
-            if (SDK.csm != null)
-            {
-                if(SDK.csm.csPlayer != null && SDK.csm.csPlayer.kalash != null)
-                {
-                    SDK.weapons[0] = SDK.csm.csPlayer.kalash;
-                    SDK.weapons[1] = SDK.csm.csPlayer.shotgun;
-                    SDK.weapons[2] = SDK.csm.csPlayer.smg;
-                    SDK.weapons[3] = SDK.csm.csPlayer.m16;
-                    SDK.weapons[4] = SDK.csm.csPlayer.pistol;
-                    SDK.weapons[5] = SDK.csm.csPlayer.deagle;
-                    Modules.RapidFire.Run();
-                    Modules.CountarStrika.InfAmmo.Run();
-                    Modules.CountarStrika.InfDamage.Run();
-                    Modules.CountarStrika.NoSpread.Run();
-                    Modules.CountarStrika.InfHealth.Run();
-                    Modules.CountarStrika.Speedhack.Run();
-                    Modules.CountarStrika.InfinityJump.Run();
-                    Modules.CountarStrika.Wallhack.Run();
-                    Modules.CountarStrika.SpawnerExploits.Run();
-                    Modules.CountarStrika.InstantMatchmaking.Run();
-                }
-                
-            }
+            
             Modules.Noclip.Run();
             calls++;
             if(calls > 150)
@@ -79,9 +56,34 @@ namespace ModMenu_SLS
                     GameManager.Instance.toiletTime = 0;
                 }
 
+                SDK.ai = GameObject.FindObjectsOfType<CamperAI>();
+                SDK.ai_dm = GameObject.FindObjectsOfType<CamperAI_DeathMatch>();
+                SDK.csm = GameObject.FindObjectOfType<CamperStrikeManager>();
 
+
+                if (SDK.csm != null)
+                {
+                    if (SDK.csm.csPlayer != null && SDK.csm.csPlayer.kalash != null)
+                    {
+                        SDK.weapons[0] = SDK.csm.csPlayer.kalash;
+                        SDK.weapons[1] = SDK.csm.csPlayer.shotgun;
+                        SDK.weapons[2] = SDK.csm.csPlayer.smg;
+                        SDK.weapons[3] = SDK.csm.csPlayer.m16;
+                        SDK.weapons[4] = SDK.csm.csPlayer.pistol;
+                        SDK.weapons[5] = SDK.csm.csPlayer.deagle;
+                    }
+
+                }
             }
-            
+            Modules.RapidFire.Run();
+            Modules.CountarStrika.InfAmmo.Run();
+            Modules.CountarStrika.InfDamage.Run();
+            Modules.CountarStrika.NoSpread.Run();
+            Modules.CountarStrika.InfHealth.Run();
+            Modules.CountarStrika.Speedhack.Run();
+            Modules.CountarStrika.InfinityJump.Run();
+            Modules.CountarStrika.InstantMatchmaking.Run();
+
         }
     }
 }

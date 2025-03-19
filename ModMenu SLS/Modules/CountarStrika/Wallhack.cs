@@ -14,8 +14,7 @@ namespace ModMenu_SLS.Modules.CountarStrika
 
             if(SDK.Wallhack)
             {
-                var test = GameObject.FindObjectsOfType<CamperAI_DeathMatch>();
-                foreach(var c in test)
+                foreach(var c in SDK.ai)
                 {
                     if(c.csPlayer != null && c.health > 0)
                     {

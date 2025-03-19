@@ -14,11 +14,10 @@ namespace ModMenu_SLS.Modules.CountarStrika
 
             if (SDK.Speedhack)
             {
-                var csm = GameObject.FindObjectOfType<CamperStrikeManager>();
-                if (csm.csPlayer == null)
+                if (SDK.csm.csPlayer == null)
                     return;
 
-                var CPlayer = csm.csPlayer;
+                var CPlayer = SDK.csm.csPlayer;
 
                 CPlayer.speed = 30;
             }
