@@ -11,15 +11,15 @@
         {
             public static void Render()
             {
-                /*SDK.posname = GUILayout.TextField(SDK.posname, SDK.TextBoxStyle);
+                SDK.posname = GUILayout.TextField(SDK.posname, SDK.TextBoxStyle);
                 if (GUILayout.Button("Dump your current location", SDK.ButtonStyle))
                 {
                     if (!System.IO.Directory.Exists("C:\\ModMenu_SLS"))
                     {
                         System.IO.Directory.CreateDirectory("C:\\ModMenu_SLS");
                     }
-                    System.IO.File.AppendAllText("C:\\ModMenu_SLS\\dump.txt", $"\n{SDK.posname} = {SDK.PlayerController.playerRay.transform.position.ToString()}");
-                }*/
+                    System.IO.File.AppendAllText("C:\\ModMenu_SLS\\dump.txt", $"\n{SDK.posname} = {GameManager.Instance.playerMotor.transform.position.ToString()}");
+                }
                 GUILayout.Label("NoClip Speed",SDK.TextStyle);
                 SDK.speed = GUILayout.HorizontalSlider(SDK.speed, 1f, 25f);
                 SDK.bNoClip = GUILayout.Toggle(SDK.bNoClip, $"NoClip: {SDK.bNoClip}", SDK.CheckboxStyle);
@@ -33,7 +33,6 @@
                 SDK.Wallhack = GUILayout.Toggle(SDK.Wallhack, $"Wallhack: {SDK.Wallhack}", SDK.CheckboxStyle);
                 SDK.InfinityJump = GUILayout.Toggle(SDK.InfinityJump, $"Infinity Jump: {SDK.InfinityJump}", SDK.CheckboxStyle);
                 SDK.CounterHouse = GUILayout.Toggle(SDK.CounterHouse, $"Spawn on normal map: {SDK.CounterHouse}",SDK.CheckboxStyle);
-                SDK.bInstantMatchmaking = GUILayout.Toggle(SDK.bInstantMatchmaking, $"Instant Matchmaking: {SDK.bInstantMatchmaking}", SDK.CheckboxStyle);
 
             }
         }
