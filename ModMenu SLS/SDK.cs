@@ -36,7 +36,7 @@ namespace ModMenu_SLS
         {
             TP.position = Where;
         }
-        public static bool IsInGame => GameManager.Instance != null;
+        public static bool IsInGame => GameManager.Instance.playerMotor != null;
         public static bool bInstantMatchmaking = false;
         public static bool bNoNeeds = false;
         public static bool bNoClip = false;

@@ -50,7 +50,7 @@ namespace ModMenu_SLS
                 calls = 0;
                 if (SDK.bNoNeeds)
                 {
-                    GameManager.Instance.awekingTime = 0;
+                    GameManager.Instance.playerMotor.energy = 100;
                     GameManager.Instance.hungerTime = 0;
                     GameManager.Instance.notShowerTime = 0;
                     GameManager.Instance.toiletTime = 0;
