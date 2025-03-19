@@ -11,11 +11,11 @@ namespace ModMenu_SLS.UI
             if (!ModMenu_SLS.Entry.isMenuOpen || !SDK.IsInGame)
                 return;
 
-            Color textboxColor = new Color(0.98f, 0.94f, 0.90f);    // Light beige
-            Color buttonBackgroundColor = new Color(0.75f, 0.75f, 0.75f);     // Light gray for button background
-            Color buttonTextColor = Color.black;     // Black text for button
-            Color hoverButtonBackgroundColor = new Color(0.85f, 0.85f, 0.85f); // Lighter gray for hovered button background
-            Color windowBackgroundColor = new Color(0.9f, 0.9f, 0.9f); // Light gray for window background
+            Color textboxColor = new Color(0.98f, 0.94f, 0.90f);
+            Color buttonBackgroundColor = new Color(0.75f, 0.75f, 0.75f);
+            Color buttonTextColor = Color.black;
+            Color hoverButtonBackgroundColor = new Color(0.85f, 0.85f, 0.85f);
+            Color windowBackgroundColor = new Color(0.9f, 0.9f, 0.9f);
 
             SDK.ButtonStyle.normal.background = SDK.MakeTexture(2, 2, buttonBackgroundColor);
             SDK.ButtonStyle.normal.textColor = buttonTextColor;
@@ -42,7 +42,7 @@ namespace ModMenu_SLS.UI
             SDK.ButtonStyleNavBar.fixedHeight = 35;
             SDK.TextStyle.normal.textColor = Color.black;
             SDK.TextStyle.alignment = TextAnchor.MiddleCenter;
-            GUI.Window(0, new Rect(Screen.width / 2 - 262, Screen.height / 2 - 300, 525, 600), Window.Render, "SLS mod menu", SDK.WindowStyle);
+            GUI.Window(0, new Rect(Screen.width / 2 - 262, Screen.height / 2 - 300, 525, 600), Window.Render, "SLS2 mod menu", SDK.WindowStyle);
         }
     }
 }

@@ -36,12 +36,10 @@ namespace ModMenu_SLS
         {
             TP.position = Where;
         }
-        public static bool IsInGame => GameManager.Instance.playerMotor != null;
+        public static bool IsInGame => GameManager.Instance != null;
         public static bool bInstantMatchmaking = false;
         public static bool bNoNeeds = false;
         public static bool bNoClip = false;
-        public static bool TrashSkiller = false;
-        public static bool InfinityTrashMotivation = false;
         public static GUIStyle ButtonStyle = new GUIStyle();
         public static GUIStyle ButtonStyleNavBar = new GUIStyle();
         public static GUIStyle WindowStyle = new GUIStyle();

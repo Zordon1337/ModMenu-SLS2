@@ -12,7 +12,7 @@ namespace ModMenu_SLS.UI
             Color contentBackgroundColor = new Color(0.9f, 0.9f, 0.9f); // Light gray
             GUILayout.BeginArea(new Rect(0, 0, 175, 600));
             GUI.DrawTexture(new Rect(0, 0, 175, 600), SDK.MakeTexture(2, 2, navbarBackgroundColor), ScaleMode.StretchToFill);
-            GUILayout.Label("MODMENU SLS - zrd.ovh", SDK.TextStyle);
+            GUILayout.Label("MODMENU SLS2 - zrd.ovh", SDK.TextStyle);
             if (GUILayout.Button("Teleporter", SDK.ButtonStyleNavBar, GUILayout.ExpandWidth(true)))
             {
                 SDK.page = 0;

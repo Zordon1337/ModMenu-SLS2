@@ -98,8 +98,6 @@
     <Compile Include="Modules\CountarStrika\InfDamage.cs" />
     <Compile Include="Modules\CountarStrika\InfAmmo.cs" />
     <Compile Include="Modules\CountarStrika\InfHealth.cs" />
-    <Compile Include="Modules\CountarStrika\InstantMatchmaking.cs" />
-    <Compile Include="Modules\CountarStrika\SpawnerExploits.cs" />
     <Compile Include="Modules\CountarStrika\NoSpread.cs" />
     <Compile Include="Modules\CountarStrika\Speedhack.cs" />
     <Compile Include="Modules\CountarStrika\Wallhack.cs" />

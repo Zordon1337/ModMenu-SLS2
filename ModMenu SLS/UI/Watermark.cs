@@ -21,7 +21,7 @@ namespace ModMenu_SLS.UI
 
 
             
-            GUILayout.Label($"ModMenu SLS - {Properties.Resources.BuildDate}",SDK.TextStyle);
+            GUILayout.Label($"ModMenu SLS2 - {Properties.Resources.BuildDate}",SDK.TextStyle);
         }
     }
 }

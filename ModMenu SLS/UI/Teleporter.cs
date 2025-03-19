@@ -34,22 +34,6 @@ namespace ModMenu_SLS.UI
                     SDK.TeleportPlayer(GameManager.Instance.playerMotor, Plrdestination.Value);
                 }
             }
-            /*Dictionary<string, Transform> ItemToteleportDestinations = new Dictionary<string, Transform>
-                {
-                        {"Dady Car", SDK.CM.dadyCar.transform},
-                        {"Japanese Car", SDK.CM.japaneseCar.transform },
-                        { "Van", SDK.CM.vanCar.transform},
-                        { "Suv", SDK.CM.suvCar.transform},
-                        {" Porsche", SDK.CM.porscheCar.transform }
-                };
-
-            foreach (var Plrdestination in ItemToteleportDestinations)
-            {
-                if (GUILayout.Button($"Teleport {Plrdestination.Key} to player", SDK.ButtonStyle))
-                {
-                    SDK.TeleportItem(Plrdestination.Value, SDK.PlayerController.playerRay.transform.position);
-                }
-            }*/
         }
     }
 }
